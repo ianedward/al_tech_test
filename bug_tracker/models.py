@@ -89,6 +89,7 @@ class IssueRepository(object):
 
     def create_issue(self, title, description):
         cursor = self._conn.cursor()
+        
         # parameterize sql statement
         sql_statement = "INSERT INTO issues(title, description ) VALUES(?, ?)"
         try:
