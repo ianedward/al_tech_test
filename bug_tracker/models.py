@@ -2,6 +2,7 @@ from __future__ import absolute_import
 import dateutil.parser
 import sqlite3
 from collections import namedtuple
+from passlib.hash import pbkdf2_sha256
 
 from .migrate_database import do_migrations
 
@@ -26,6 +27,7 @@ class RepositoryConnection(object):
     def __init__(self, conn):
         self._conn = conn
         self.issues = IssueRepository(self._conn)
+        self.users = UserRepository(self._conn)
 
     def __enter__(self):
         return self
@@ -40,14 +42,19 @@ class RepositoryConnection(object):
         self._conn.close()
 
 Issue = namedtuple('Issue', ['id', 'title', 'description', 'opened', 'closed'])
+User = namedtuple('User', ['id', 'name', 'password', 'datetime_joined'])
 
 
 def make_issue(row):
     id_, title, description, opened, closed = row
+
     if opened is not None:
         opened = dateutil.parser.parse(opened)
-    if closed is not None:
-        closed = dateutil.parser.parse(closed)
+    print opened
+    # opened(tzlocal().astimezone(tzoffset(None, 0)))
+        # TODO
+    # if closed is not None:
+    #     closed = dateutil.parser.parse(closed)
     return Issue(id_, title, description, opened, closed)
 
 
@@ -89,7 +96,7 @@ class IssueRepository(object):
 
     def create_issue(self, title, description):
         cursor = self._conn.cursor()
-        
+
         # parameterize sql statement
         sql_statement = "INSERT INTO issues(title, description ) VALUES(?, ?)"
         try:
@@ -107,15 +114,69 @@ class IssueRepository(object):
                     """UPDATE issues SET title = '{}' WHERE id = {}"""
                     .format(kwargs['title'], issue_id)
                 )
-            if 'description' in kwargs:
+            if 'descriptionText' in kwargs:
                 cursor.execute(
                     """UPDATE issues SET description = '{}' WHERE id = {}"""
-                    .format(kwargs['description'], issue_id)
+                    .format(kwargs['descriptionText'], issue_id)
                 )
-            if 'closed' in kwargs:
+            if 'closedDate' in kwargs:
                 cursor.execute(
                     """UPDATE issues SET closed_datetime = '{}' WHERE id = {}"""
-                    .format(kwargs['closed'].isoformat(), issue_id)
+                    .format(kwargs['closedDate'], issue_id)
+                    # TODO
+                    # .format(kwargs['closedDate'].isoformat(), issue_id)
                 )
+        finally:
+            cursor.close()
+
+    # def fetch_users(self):
+    #     cursor = self._conn.cursor()
+    #     try:
+    #         cursor.execute(
+    #             """SELECT
+    #                 *
+    #                 FROM users
+    #                 """)
+    #         return [make_user(row) for row in cursor.fetchall()]
+    #     finally:
+    #         cursor.close()
+
+
+def make_user(row):
+    id_, name, password, datetime_joined = row
+
+    # TODO
+    if datetime_joined is not None:
+        datetime_joined = dateutil.parser.parse(datetime_joined)
+    return User(id_, name, password, datetime_joined)
+
+
+class UserRepository(object):
+    def __init__(self, conn):
+        self._conn = conn
+
+    def register_user(self, username, password):
+        cursor = self._conn.cursor()
+        # Hash Password
+        hashed_password = pbkdf2_sha256.hash(password)
+        insert_statement = "INSERT INTO users(name, password ) VALUES(?, ?)"
+        try:
+            print "TRYIIIIIIIIINNNGGGGGGGGGGGGGGGGGGGGGGGGGG"
+            cursor.execute(insert_statement, (username, hashed_password))
+            cursor.execute('select last_insert_rowid()')
+
+            return cursor.fetchone()[0]
+        finally:
+            cursor.close
+
+    def fetch_users(self):
+        cursor = self._conn.cursor()
+        try:
+            cursor.execute(
+                """SELECT
+                    *
+                    FROM users
+                    """)
+            return [make_user(row) for row in cursor.fetchall()]
         finally:
             cursor.close()

@@ -11,7 +11,9 @@ def do_migrations(cursor):
         )
         if cursor.fetchone()[0] == 0:
             print "Running migration", migration
+
             with open(os.path.join(migrations_dir, migration)) as f:
+                print f
                 cursor.execute(f.read())
                 cursor.execute(
                     'INSERT INTO migrations(filename) VALUES(?)', [migration]
