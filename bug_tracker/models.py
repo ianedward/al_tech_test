@@ -109,11 +109,14 @@ class IssueRepository(object):
     def update_issue(self, issue_id, **kwargs):
         cursor = self._conn.cursor()
         try:
+            update_statement = "UPDATE issues SET title = ? WHERE id = ?"
             if 'title' in kwargs:
-                cursor.execute(
-                    """UPDATE issues SET title = '{}' WHERE id = {}"""
-                    .format(kwargs['title'], issue_id)
-                )
+                print "TAEDZA PUT STATEMENT ______--------------- brappppppppppppppppppppppppppp"
+                # cursor.execute(
+                #     """UPDATE issues SET title = '{}' WHERE id = {}"""
+                #     .format(kwargs['title'], issue_id)
+                # )
+                cursor.execute(update_statement, (kwargs['title'], issue_id))
             if 'descriptionText' in kwargs:
                 cursor.execute(
                     """UPDATE issues SET description = '{}' WHERE id = {}"""

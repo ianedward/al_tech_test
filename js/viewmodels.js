@@ -23,6 +23,12 @@ class IssuesModel {
     return response
   }
   async updateIssue(issueId, fields) {
+  var title = fields.title
+  var desc = fields.descriptionText
+  var closedt = fields.closedDate
+  console.log(title)
+  console.log(desc)
+  console.log(closedt)
     await m.request({
       method: "PUT",
       url: `/issues/${issueId}`,
