@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a4f7e6bf-b8b3-4c93-b0f7-bb76af574e86" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bug_tracker/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bug_tracker/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/viewmodels.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/viewmodels.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/views.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/views.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,17 +51,17 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="21" />
-          <entry key="js" value="2892" />
+          <entry key="js" value="3732" />
           <entry key="py" value="4227" />
           <entry key="sql" value="53" />
-          <entry key="txt" value="98" />
+          <entry key="txt" value="114" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="21" />
-          <entry key="JavaScript" value="2892" />
-          <entry key="PLAIN_TEXT" value="98" />
+          <entry key="JavaScript" value="3732" />
+          <entry key="PLAIN_TEXT" value="114" />
           <entry key="Python" value="4227" />
           <entry key="SQL" value="53" />
         </counts>
@@ -100,22 +100,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/viewmodels.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/views.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="109" column="34" selection-start-line="109" selection-start-column="34" selection-end-line="109" selection-end-column="34" />
+            <state relative-caret-position="459">
+              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/views.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2933">
+              <caret column="28" selection-start-column="28" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bug_tracker/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="464">
@@ -186,8 +186,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>default</find>
-      <find>date</find>
       <find>textarea</find>
       <find>isoformat</find>
       <find>issuesModel</find>
@@ -214,8 +212,10 @@
       <find>INSERT</find>
       <find>POST</find>
       <find>descriptionText</find>
-      <find>CreateIssue</find>
       <find>on_put</find>
+      <find>CreateIssue</find>
+      <find>closedDate</find>
+      <find>const</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -244,9 +244,9 @@
         <option value="$PROJECT_DIR$/bug_tracker/resources.py" />
         <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/bug_tracker/server.py" />
-        <option value="$PROJECT_DIR$/js/views.js" />
         <option value="$PROJECT_DIR$/js/viewmodels.js" />
         <option value="$PROJECT_DIR$/bug_tracker/models.py" />
+        <option value="$PROJECT_DIR$/js/views.js" />
       </list>
     </option>
   </component>
@@ -321,7 +321,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537310906703" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537323255756" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../model-proj/mongodb-express-redux-mithril-universal-start-master/mongodb-express-redux-mithril-universal-start-master" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -463,7 +463,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537309251511</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="bottom up">
+      <created>1537311068957</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1537311068957</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -479,7 +486,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-391" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09008529" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -516,7 +522,8 @@
     <MESSAGE value="comment changes" />
     <MESSAGE value="initial commit dev branch" />
     <MESSAGE value="registration page working" />
-    <option name="LAST_COMMIT_MESSAGE" value="registration page working" />
+    <MESSAGE value="bottom up" />
+    <option name="LAST_COMMIT_MESSAGE" value="bottom up" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/features/issues.feature">
@@ -678,34 +685,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bug_tracker/migrate_database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="68" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="109" column="34" selection-start-line="109" selection-start-column="34" selection-end-line="109" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/viewmodels.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -720,6 +703,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bug_tracker/migrate_database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="68" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bug_tracker/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
@@ -727,6 +720,20 @@
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/viewmodels.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2933">
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
         </state>
       </provider>
     </entry>

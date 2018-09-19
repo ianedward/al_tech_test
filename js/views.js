@@ -27,33 +27,6 @@ class IssuesList {
   }
 }
 
-//class LoginUser {
-//  constructor(vnode) {
-//    this.model = vnode.attrs.model
-//  }
-//    oninit() {
-//      this.model.loadPage()
-//    }
-//  view() {
-//    return m('table.table', [
-//      m('thead', [
-//        m('th', 'title'),
-//        m('th', 'opened'),
-//        m('th', 'closed')
-//      ]),
-//      m('tbody', [
-//          m('tr', [
-//            m('td.title-cell', '1'),
-//            m('td.opened-cell', '2'),
-//            m('td.closed-cell', '3')
-//          ])
-//      ])
-//    ])
-//  }
-//}
-//
-
-
 
 class ViewIssue {
   constructor(vnode) {
@@ -183,6 +156,11 @@ class IssueEditor {
     this.closedDate = vnode.attrs.closedDate
     this.onSubmit = vnode.attrs.onSubmit
   }
+
+
+
+
+
   view() {
     return m('form', {onsubmit: e => this.onSubmit({title: this.title, descriptionText: this.descriptionText, closedDate: this.closedDate})}, [
       m('.form-group', [
@@ -195,7 +173,7 @@ class IssueEditor {
       ]),
       m('.form-group', [
         m('label', {'for': 'open-close-input'}, 'Issue Tracker'),
-        m('input.form-control#open-close-input', {value: this.closedDate, oninput: (e) => {this.closedDate = e.target.value}})
+        m('input.[type=date]form-control#open-close-input', {value: this.closedDate, oninput: (e) => {this.closedDate = e.target.value}})
         ]),
       m('button.btn.btn-primary#save-button', {type: 'submit'}, 'Save')
     ])
