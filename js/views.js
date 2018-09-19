@@ -97,8 +97,9 @@ class CreateIssue {
     return m(IssueEditor, {
       title: '',
       descriptionText: '',
-      onSubmit: async ({descriptionText, title}) => {
-        await this.model.createIssue({description: descriptionText, title: title})
+      closedDate: '',
+      onSubmit: async ({descriptionText, title, closedDate}) => {
+        await this.model.createIssue({descriptionText: descriptionText, title: title, closedDate: closedDate})
         m.route.set(`/issues`)
         m.redraw()
       }
@@ -116,7 +117,7 @@ class CreateUser {
       password: '',
       onSubmit: async ({password, user}) => {
         await this.model.createUser({password: password, user: user})
-        m.route.set(`/login`)
+        m.route.set(`/issues`)
         m.redraw()
       }
     })
@@ -156,10 +157,6 @@ class IssueEditor {
     this.closedDate = vnode.attrs.closedDate
     this.onSubmit = vnode.attrs.onSubmit
   }
-
-
-
-
 
   view() {
     return m('form', {onsubmit: e => this.onSubmit({title: this.title, descriptionText: this.descriptionText, closedDate: this.closedDate})}, [

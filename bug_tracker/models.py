@@ -50,11 +50,6 @@ def make_issue(row):
 
     if opened is not None:
         opened = dateutil.parser.parse(opened)
-    print opened
-    # opened(tzlocal().astimezone(tzoffset(None, 0)))
-        # TODO
-    # if closed is not None:
-    #     closed = dateutil.parser.parse(closed)
     return Issue(id_, title, description, opened, closed)
 
 
@@ -94,13 +89,13 @@ class IssueRepository(object):
         finally:
             cursor.close()
 
-    def create_issue(self, title, description):
+    def create_issue(self, title, description, closedDate):
         cursor = self._conn.cursor()
 
-        # parameterize sql statement
-        sql_statement = "INSERT INTO issues(title, description ) VALUES(?, ?)"
         try:
-            cursor.execute(sql_statement, (title, description))
+            # parameterize sql statement
+            sql_statement = "INSERT INTO issues(title, description, closed_datetime ) VALUES(?, ?, ?)"
+            cursor.execute(sql_statement, (title, description, closedDate))
             cursor.execute('select last_insert_rowid()')
             return cursor.fetchone()[0]
         finally:
@@ -109,13 +104,9 @@ class IssueRepository(object):
     def update_issue(self, issue_id, **kwargs):
         cursor = self._conn.cursor()
         try:
+            # parameterize sql statement
             update_statement = "UPDATE issues SET title = ? WHERE id = ?"
             if 'title' in kwargs:
-                print "TAEDZA PUT STATEMENT ______--------------- brappppppppppppppppppppppppppp"
-                # cursor.execute(
-                #     """UPDATE issues SET title = '{}' WHERE id = {}"""
-                #     .format(kwargs['title'], issue_id)
-                # )
                 cursor.execute(update_statement, (kwargs['title'], issue_id))
             if 'descriptionText' in kwargs:
                 cursor.execute(
@@ -126,23 +117,9 @@ class IssueRepository(object):
                 cursor.execute(
                     """UPDATE issues SET closed_datetime = '{}' WHERE id = {}"""
                     .format(kwargs['closedDate'], issue_id)
-                    # TODO
-                    # .format(kwargs['closedDate'].isoformat(), issue_id)
                 )
         finally:
             cursor.close()
-
-    # def fetch_users(self):
-    #     cursor = self._conn.cursor()
-    #     try:
-    #         cursor.execute(
-    #             """SELECT
-    #                 *
-    #                 FROM users
-    #                 """)
-    #         return [make_user(row) for row in cursor.fetchall()]
-    #     finally:
-    #         cursor.close()
 
 
 def make_user(row):
@@ -160,11 +137,11 @@ class UserRepository(object):
 
     def register_user(self, username, password):
         cursor = self._conn.cursor()
-        # Hash Password
-        hashed_password = pbkdf2_sha256.hash(password)
-        insert_statement = "INSERT INTO users(name, password ) VALUES(?, ?)"
+
         try:
-            print "TRYIIIIIIIIINNNGGGGGGGGGGGGGGGGGGGGGGGGGG"
+            # Hash Password
+            hashed_password = pbkdf2_sha256.hash(password)
+            insert_statement = "INSERT INTO users(name, password ) VALUES(?, ?)"
             cursor.execute(insert_statement, (username, hashed_password))
             cursor.execute('select last_insert_rowid()')
 

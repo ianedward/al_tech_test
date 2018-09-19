@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a4f7e6bf-b8b3-4c93-b0f7-bb76af574e86" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bug_tracker/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bug_tracker/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bug_tracker/resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/bug_tracker/resources.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bug_tracker/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/bug_tracker/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/viewmodels.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/viewmodels.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/views.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/views.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,18 +54,18 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="21" />
-          <entry key="js" value="3732" />
-          <entry key="py" value="4227" />
+          <entry key="js" value="3943" />
+          <entry key="py" value="4633" />
           <entry key="sql" value="53" />
-          <entry key="txt" value="114" />
+          <entry key="txt" value="136" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="21" />
-          <entry key="JavaScript" value="3732" />
-          <entry key="PLAIN_TEXT" value="114" />
-          <entry key="Python" value="4227" />
+          <entry key="JavaScript" value="3943" />
+          <entry key="PLAIN_TEXT" value="136" />
+          <entry key="Python" value="4633" />
           <entry key="SQL" value="53" />
         </counts>
       </usages-collector>
@@ -78,11 +81,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bug_tracker/resources.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="60" column="30" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+            <state relative-caret-position="359">
+              <caret line="80" column="23" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="23" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
-                <marker date="1537132969744" expanded="true" signature="2118:2121" ph="..." />
+                <marker date="1537346685479" expanded="true" signature="1941:1944" ph="..." />
               </folding>
             </state>
           </provider>
@@ -91,8 +94,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+            <state relative-caret-position="102">
+              <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-end-line="6" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -100,8 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/viewmodels.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+            <state relative-caret-position="-230">
+              <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -109,8 +112,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/views.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2933">
-              <caret column="28" selection-start-column="28" selection-end-column="28" />
+            <state relative-caret-position="595">
+              <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -118,8 +121,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bug_tracker/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="113" column="76" selection-start-line="113" selection-start-column="76" selection-end-line="113" selection-end-column="76" />
+            <state relative-caret-position="267">
+              <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -137,11 +140,6 @@
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bug_tracker/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -165,11 +163,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bug_tracker/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="104" column="39" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="39" />
+            <state relative-caret-position="-51">
+              <caret line="24" column="43" lean-forward="true" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
-                <marker date="1537300855333" expanded="true" signature="1682:2727" ph="..." />
+                <marker date="1537346685347" expanded="true" signature="439:441" ph="..." />
               </folding>
             </state>
           </provider>
@@ -186,25 +184,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>textarea</find>
-      <find>isoformat</find>
-      <find>issuesModel</find>
-      <find>fields</find>
-      <find>onSubmit</find>
-      <find>response.issues</find>
-      <find>issue</find>
-      <find>request</find>
-      <find>issues</find>
-      <find>IssuesModel</find>
-      <find>loadIssues()</find>
-      <find>list_issues</find>
       <find>Landing</find>
       <find>create_is</find>
       <find>repo</find>
       <find>t.onSub</find>
       <find>500</find>
       <find>.catch</find>
-      <find>createIssue</find>
       <find>loadIssues</find>
       <find>IssuesResource</find>
       <find>login</find>
@@ -212,10 +197,23 @@
       <find>INSERT</find>
       <find>POST</find>
       <find>descriptionText</find>
-      <find>on_put</find>
       <find>CreateIssue</find>
       <find>closedDate</find>
       <find>const</find>
+      <find>error</find>
+      <find>closed</find>
+      <find>on_put</find>
+      <find>create_issue</find>
+      <find>description</find>
+      <find>POST</find>
+      <find>POST ISSED</find>
+      <find>POST ISSUED</find>
+      <find>edit</find>
+      <find>createIssue</find>
+      <find>print</find>
+      <find>images</find>
+      <find>console.log</find>
+      <find>console</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -241,12 +239,12 @@
         <option value="$PROJECT_DIR$/bug_tracker/migrations/02_create_users.sql" />
         <option value="$PROJECT_DIR$/bug_tracker/migrate_database.py" />
         <option value="$PROJECT_DIR$/bug_tracker/migrations/02_create_users_table.sql" />
-        <option value="$PROJECT_DIR$/bug_tracker/resources.py" />
         <option value="$PROJECT_DIR$/js/index.js" />
+        <option value="$PROJECT_DIR$/js/views.js" />
+        <option value="$PROJECT_DIR$/bug_tracker/models.py" />
+        <option value="$PROJECT_DIR$/bug_tracker/resources.py" />
         <option value="$PROJECT_DIR$/bug_tracker/server.py" />
         <option value="$PROJECT_DIR$/js/viewmodels.js" />
-        <option value="$PROJECT_DIR$/bug_tracker/models.py" />
-        <option value="$PROJECT_DIR$/js/views.js" />
       </list>
     </option>
   </component>
@@ -321,7 +319,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537323255756" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537346341309" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../model-proj/mongodb-express-redux-mithril-universal-start-master/mongodb-express-redux-mithril-universal-start-master" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -470,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537311068957</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="working till login">
+      <created>1537323724237</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1537323724237</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -487,7 +492,7 @@
   <component name="ToolWindowManager">
     <frame x="1358" y="-391" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09008529" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13432837" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -523,7 +528,8 @@
     <MESSAGE value="initial commit dev branch" />
     <MESSAGE value="registration page working" />
     <MESSAGE value="bottom up" />
-    <option name="LAST_COMMIT_MESSAGE" value="bottom up" />
+    <MESSAGE value="working till login" />
+    <option name="LAST_COMMIT_MESSAGE" value="working till login" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/features/issues.feature">
@@ -657,9 +663,6 @@
     <entry file="file://$PROJECT_DIR$/css/styles.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/bug_tracker/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/bug_tracker/migrations/01_create_issues_table.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -674,34 +677,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bug_tracker/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="104" column="39" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <marker date="1537300855333" expanded="true" signature="1682:2727" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bug_tracker/resources.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="60" column="30" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <marker date="1537132969744" expanded="true" signature="2118:2121" ph="..." />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/bug_tracker/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/bug_tracker/migrate_database.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -713,27 +690,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-end-line="6" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bug_tracker/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="113" column="76" selection-start-line="113" selection-start-column="76" selection-end-line="113" selection-end-column="76" />
+        <state relative-caret-position="267">
+          <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bug_tracker/resources.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="80" column="23" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <marker date="1537346685479" expanded="true" signature="1941:1944" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bug_tracker/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="24" column="43" lean-forward="true" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <marker date="1537346685347" expanded="true" signature="439:441" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/viewmodels.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        <state relative-caret-position="-230">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/views.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2933">
-          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        <state relative-caret-position="595">
+          <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
         </state>
       </provider>
     </entry>
